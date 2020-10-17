@@ -80,7 +80,7 @@ contract('DappTokenSale', function(accounts) {
       return tokenInstance.balanceOf(admin);
     }).then(function(balance) {
       assert.equal(balance.toNumber(), 999990, 'returns all unsold dapp tokens to admin');
-      //token prioce is reset when self destruct was called
+      //token price is reset when self destruct was called
       return web3.eth.getBalance(tokenSaleInstance.address)
     }).then(function(balance){
       assert.equal(balance, 0);
